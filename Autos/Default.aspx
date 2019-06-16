@@ -2,41 +2,80 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-    <div class="jumbotron">
-        <h1>ASP.NET</h1>
-        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
-        <p><a href="http://www.asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-    </div>
 
-    <div class="row">
-        <div class="col-md-4">
-            <h2>Getting started</h2>
-            <p>
-                ASP.NET Web Forms lets you build dynamic websites using a familiar drag-and-drop, event-driven model.
-            A design surface and hundreds of controls and components let you rapidly build sophisticated, powerful UI-driven sites with data access.
-            </p>
-            <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301948">Learn more &raquo;</a>
-            </p>
-        </div>
-        <div class="col-md-4">
-            <h2>Get more libraries</h2>
-            <p>
-                NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.
-            </p>
-            <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301949">Learn more &raquo;</a>
-            </p>
-        </div>
-        <div class="col-md-4">
-            <h2>Web Hosting</h2>
-            <p>
-                You can easily find a web hosting company that offers the right mix of features and price for your applications.
-            </p>
-            <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301950">Learn more &raquo;</a>
-            </p>
-        </div>
-    </div>
+
+    <br />
+    <br />
+    <span style="color: #FFFFFF; font-size: xx-large"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Municipalidad<br />
+    <br />
+    </strong>
+    <asp:Label ID="Label1" runat="server" style="font-size: small; color: #000000" Text="Ingrese su usuario y contraseña"></asp:Label>
+    <strong>
+    <br />
+    </strong>
+    <table class="nav-justified">
+        <tr>
+            <td style="width: 431px">
+                &nbsp;</td>
+            <td>
+                &nbsp;</td>
+        </tr>
+    </table>
+    </span><br />
+    <br />
+    <br />
+    <br />
+&nbsp;&nbsp;&nbsp;
+<table style="width: 55%; border: 1px solid #808080">
+    <tr>
+        <td style="width: 175px; color: #000000;">Usuario:</td>
+        <td style="width: 198px">
+            <asp:TextBox ID="TextUsuario" runat="server" Width="201px"></asp:TextBox>
+        </td>
+        <td style="width: 598px">
+        <asp:RequiredFieldValidator id="RequiredFieldValidator1" runat="server" ControlToValidate="TextUsuario" 
+ErrorMessage="Este campo es requerido"
+ForeColor="Red">
+</asp:RequiredFieldValidator>
+        </td>
+    </tr>
+    </table>
+    <br />
+    &nbsp;&nbsp;&nbsp;
+<table style="width: 55%; border: 1px solid #808080">
+    <tr>
+        <td style="width: 175px; color: #000000;">Contraseña:</td>
+        <td style="width: 198px">
+            <asp:TextBox ID="TextContrasenna" runat="server" Width="201px"></asp:TextBox>
+        </td>
+        <td style="width: 598px">
+        <asp:RequiredFieldValidator id="RequiredFieldValidator2" runat="server" ControlToValidate="TextUsuario" 
+ErrorMessage="Este campo es requerido"
+ForeColor="Red">
+</asp:RequiredFieldValidator>
+        </td>
+    </tr>
+    </table>
+    <br />
+    <br />
+<br />
+<asp:Button ID="ButtonAceptar" runat="server" Text="Aceptar" OnClick="ButtonAceptar_Click" />
+<br />
+<br />
+<asp:Label ID="LabelError" runat="server" ForeColor="Red" Text="Usuario incorrecto" Visible="False"></asp:Label>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+
 
 </asp:Content>
