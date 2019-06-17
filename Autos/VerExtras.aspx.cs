@@ -18,8 +18,8 @@ namespace Autos
         {
             String idCliente = Request.QueryString["Valor"];
             String idSucursal = Request.QueryString["Valor1"];
-            String placa = Request.QueryString["Valor2"];
-            Response.Redirect("ComprarCarro.aspx?Valor=" + idCliente + "Valor1=" + idSucursal + "Valor2=" + placa);
+            String idAutomovil = Request.QueryString["Valor2"];
+            Response.Redirect("ComprarCarro.aspx?Valor=" + idCliente + "Valor1=" + idSucursal + "Valor2=" + idAutomovil);
         }
     }
 }

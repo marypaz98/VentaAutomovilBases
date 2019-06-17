@@ -10,7 +10,7 @@
 namespace Autos {
     
     
-    public partial class _Default {
+    public partial class Default {
         
         /// <summary>
         /// Control Label1.

@@ -1,16 +1,26 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="OpcionesCliente.aspx.cs" Inherits="Autos.WebForm1" %>
+﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="OpcionesCliente.aspx.cs" Inherits="Autos.OpcionesCliente" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
+<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
         <div>
-            <input id="ButtonAutosDisponibles" type="button" value="Ver autos disponibles" onclick="ButtonAutosDisponibles_Click" /></div>
-    </form>
-</body>
-</html>
+            <br />
+            <br />
+            <asp:Button ID="ButtonAutosDisponibles" runat="server" OnClick="ButtonAutosDisponibles_Click1" Text="Ver autos disponibles" />
+            <br />
+            <br />
+            <br />
+            <br />
+        </div>
+        <p>
+            <asp:Button ID="ButtonConsultar" runat="server" OnClick="ButtonConsultar_Click" Text="Consultar modelo" />
+        </p>
+        <p>
+            &nbsp;</p>
+        <p>
+            &nbsp;</p>
+        <p>
+            <asp:Button ID="ButtonConsignar" runat="server" OnClick="ButtonConsignar_Click" Text="Consignar automovil" />
+        </p>
+        <p>
+            &nbsp;</p>
+
+</asp:Content>

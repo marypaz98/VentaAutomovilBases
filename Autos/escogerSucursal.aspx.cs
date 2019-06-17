@@ -13,23 +13,25 @@ namespace Autos
         {
 
         }
-        protected void ButtonSucursal1_Click(object sender, EventArgs e)
+        protected void ButtonSucursal1_Click1(object sender, EventArgs e)
         {
             String idCliente = Request.QueryString["Valor"];
-            String idSucursal = "1"; 
-            Response.Redirect("VerAutosDisponibles.aspx?Valor=" + idCliente+"Valor1="+idSucursal);
+            String idSucursal = "1";
+            Response.Redirect("OpcionesCliente.aspx?Valor=" + idCliente + "Valor1=" + idSucursal);
         }
-        protected void ButtonSucursal2_Click(object sender, EventArgs e)
+
+        protected void ButtonSucursal2_Click1(object sender, EventArgs e)
         {
             String idCliente = Request.QueryString["Valor"];
             String idSucursal = "2";
-            Response.Redirect("VerAutosDisponibles.aspx?Valor=" + idCliente + "Valor1=" + idSucursal);
+            Response.Redirect("OpcionesCliente.aspx?Valor=" + idCliente + "Valor1=" + idSucursal);
         }
-        protected void ButtonSucursal3_Click(object sender, EventArgs e)
+
+        protected void ButtonSucursal3_Click1(object sender, EventArgs e)
         {
             String idCliente = Request.QueryString["Valor"];
             String idSucursal = "3";
-            Response.Redirect("VerAutosDisponibles.aspx?Valor=" + idCliente + "Valor1=" + idSucursal);
+            Response.Redirect("OpcionesCliente.aspx?Valor=" + idCliente + "Valor1=" + idSucursal);
         }
     }
 }
