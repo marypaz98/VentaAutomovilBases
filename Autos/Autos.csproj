@@ -106,7 +106,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="AgregarExtras.aspx" />
     <Content Include="ComprarCarro.aspx" />
+    <Content Include="ConsultarModelo.aspx" />
+    <Content Include="ConsultarModelo1.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -115,6 +118,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="escogerSucursal.aspx" />
+    <Content Include="Facturar.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -132,6 +136,8 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="PagarMensualidad.aspx" />
+    <Content Include="registrarse.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -163,12 +169,20 @@
     <Content Include="Site.Master" />
     <Content Include="VerAutosDisponibles.aspx" />
     <Content Include="VerExtras.aspx" />
+    <Content Include="VerInforSucursal.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgregarExtras.aspx.cs">
+      <DependentUpon>AgregarExtras.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgregarExtras.aspx.designer.cs">
+      <DependentUpon>AgregarExtras.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
@@ -184,6 +198,20 @@
     </Compile>
     <Compile Include="ComprarCarro.aspx.designer.cs">
       <DependentUpon>ComprarCarro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultarModelo.aspx.cs">
+      <DependentUpon>ConsultarModelo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConsultarModelo.aspx.designer.cs">
+      <DependentUpon>ConsultarModelo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultarModelo1.aspx.cs">
+      <DependentUpon>ConsultarModelo1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConsultarModelo1.aspx.designer.cs">
+      <DependentUpon>ConsultarModelo1.aspx</DependentUpon>
     </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
@@ -206,14 +234,35 @@
     <Compile Include="escogerSucursal.aspx.designer.cs">
       <DependentUpon>escogerSucursal.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Facturar.aspx.cs">
+      <DependentUpon>Facturar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Facturar.aspx.designer.cs">
+      <DependentUpon>Facturar.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="PagarMensualidad.aspx.cs">
+      <DependentUpon>PagarMensualidad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagarMensualidad.aspx.designer.cs">
+      <DependentUpon>PagarMensualidad.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="registrarse.aspx.cs">
+      <DependentUpon>registrarse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registrarse.aspx.designer.cs">
+      <DependentUpon>registrarse.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
@@ -242,6 +291,13 @@
     </Compile>
     <Compile Include="VerExtras.aspx.designer.cs">
       <DependentUpon>VerExtras.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VerInforSucursal.aspx.cs">
+      <DependentUpon>VerInforSucursal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VerInforSucursal.aspx.designer.cs">
+      <DependentUpon>VerInforSucursal.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>

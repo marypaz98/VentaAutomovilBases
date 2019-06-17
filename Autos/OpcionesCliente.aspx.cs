@@ -34,5 +34,25 @@ namespace Autos
             String idSucursal = Request.QueryString["Valor1"];
             Response.Redirect("ConsignarAutomovil.aspx?Valor=" + idCliente + "Valor1=" + idSucursal);
         }
+
+        protected void ButtonPagarMensualidad_Click(object sender, EventArgs e)
+        {
+            String idCliente = Request.QueryString["Valor"];
+            String idSucursal = Request.QueryString["Valor1"];
+            Response.Redirect("PagarMensualidad.aspx?Valor=" + idCliente + "Valor1" + idSucursal);
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            String idCliente = Request.QueryString["Valor"];
+            String idSucursal = Request.QueryString["Valor1"];
+            Response.Redirect("Facturar.aspx?Valor=" + idCliente + "Valor1=" + idSucursal);
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            String idSucursal = Request.QueryString["Valor1"];
+            Response.Redirect("VerInforSucursal.aspx?Valor=" + idSucursal);
+        }
     }
 }
