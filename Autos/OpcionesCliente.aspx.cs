@@ -7,16 +7,32 @@ using System.Web.UI.WebControls;
 
 namespace Autos
 {
-    public partial class WebForm1 : System.Web.UI.Page
+    public partial class OpcionesCliente : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
-        protected void ButtonAutosDisponibles_Click(object sender, EventArgs e)
+
+        protected void ButtonAutosDisponibles_Click1(object sender, EventArgs e)
+        {
+            String idCliente =Request.QueryString["Valor"];
+            String idSucursal = Request.QueryString["Valor1"];
+            Response.Redirect("VerAutosDisponibles.aspx?Valor=" + idCliente+"Valor1="+idSucursal);
+        }
+
+        protected void ButtonConsultar_Click(object sender, EventArgs e)
         {
             String idCliente = Request.QueryString["Valor"];
-            Response.Redirect("EscogerSucursal.aspx?Valor=" + idCliente);
+            String idSucursal = Request.QueryString["Valor1"];
+            Response.Redirect("ConsultarModelo.aspx?Valor=" + idCliente + "Valor1=" + idSucursal);
+        }
+
+        protected void ButtonConsignar_Click(object sender, EventArgs e)
+        {
+            String idCliente = Request.QueryString["Valor"];
+            String idSucursal = Request.QueryString["Valor1"];
+            Response.Redirect("ConsignarAutomovil.aspx?Valor=" + idCliente + "Valor1=" + idSucursal);
         }
     }
 }

@@ -1,30 +1,27 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="escogerSucursal.aspx.cs" Inherits="Autos.escogerSucursal" %>
+﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="escogerSucursal.aspx.cs" Inherits="Autos.escogerSucursal" %>
 
-<!DOCTYPE html>
+<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
         <div>
+            <br />
         </div>
-    </form>
+    <p>
+        Seleccione la sucursal en la que desea realizar las transacciones:</p>
     <p>
         &nbsp;</p>
     <p>
-        &nbsp;</p>
-    <p>
-        <input id="ButtonSucursal1" type="button" value="Sucursal 1" onclick="ButtonSucursal1_Click" /></p>
-    <p>
-        &nbsp;</p>
-    <p>
-        <input id="ButtonSucursal2" type="button" value="Sucursal 2" onclick="ButtonSucursal2_Click" /></p>
+        <asp:Button ID="ButtonSucursal1" runat="server" OnClick="ButtonSucursal1_Click1" Text="Sucursal 1" />
+        </p>
     <p>
         &nbsp;</p>
     <p>
-        <input id="ButtonSucursal3" type="button" value="Sucursal" onclick="ButtonSucursal3_Click" /></p>
-</body>
-</html>
+        <asp:Button ID="ButtonSucursal2" runat="server" OnClick="ButtonSucursal2_Click1" Text="Sucursal 2" />
+        </p>
+    <p>
+        &nbsp;</p>
+    <p>
+        <asp:Button ID="ButtonSucursal3" runat="server" OnClick="ButtonSucursal3_Click1" Text="Sucursal 3" />
+        </p>
+
+
+</asp:Content>

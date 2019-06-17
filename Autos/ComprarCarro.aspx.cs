@@ -26,13 +26,13 @@ namespace Autos
             {
                 int idCliente = System.Convert.ToInt32(Request.QueryString["Valor"]);
                 int idSucursal = System.Convert.ToInt32(Request.QueryString["Valor1"]);
-                String placa = Request.QueryString["Valor2"];
+                int idAutomovil = System.Convert.ToInt32(Request.QueryString["Valor2"]);
                 int idTipoPago = ListBox1.SelectedIndex + 1;
                 SqlConnection conexion = new SqlConnection(@"Data Source=DESKTOP-FA0O96B;Initial Catalog=Fabrica;Integrated Security=True");
                 SqlCommand comando = conexion.CreateCommand();
                 comando.CommandText = "venderCarro";
                 comando.CommandType = CommandType.StoredProcedure;
-                comando.Parameters.AddWithValue("@placa", placa);
+                comando.Parameters.AddWithValue("@idAutomovil", idAutomovil);
                 comando.Parameters.AddWithValue("@idCliente", idCliente);
                 comando.Parameters.AddWithValue("@sucursal", idSucursal);
                 comando.Parameters.AddWithValue("@idTipoPago", idTipoPago);

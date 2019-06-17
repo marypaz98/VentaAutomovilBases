@@ -10,9 +10,13 @@
 <body>
     <form id="form1" runat="server">
         <div>
+            <br />
+            <br />
+            Seleccione el automóvil que desee obtener mayor información:<br />
         </div>
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1">
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" OnSelectedIndexChangin="GridView1_SelectedIndexChangin">
             <Columns>
+                <asp:CommandField ShowSelectButton="True" />
                 <asp:BoundField DataField="placa" HeaderText="placa" SortExpression="placa" />
                 <asp:BoundField DataField="precio" HeaderText="precio" SortExpression="precio" />
                 <asp:BoundField DataField="año" HeaderText="año" SortExpression="año" />
@@ -30,18 +34,12 @@
             </SelectParameters>
         </asp:SqlDataSource>
         <p>
-            <asp:Label ID="Label1" runat="server" Text="Ingrese la placa del automovil del que desea obtener mayor información:"></asp:Label>
-        </p>
+            &nbsp;</p>
     <p>
-        <asp:TextBox ID="TextBox1" runat="server" Width="300px"></asp:TextBox>
-        <asp:RequiredFieldValidator id="RequiredFieldValidator1" runat="server" ControlToValidate="TextBox1" 
-ErrorMessage="Este campo es requerido"
-ForeColor="Red">
-</asp:RequiredFieldValidator>
-        </p>
+        &nbsp;</p>
     </form>
     <p id="ButonAceptar">
-        <input id="Aceptar" type="button" value="Aceptar" onclick="ButtonAceptar_Click"/></p>
+        &nbsp;</p>
     <p>
         &nbsp;</p>
 </body>
