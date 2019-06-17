@@ -5,6 +5,14 @@
 
 
     <br />
+    <br />
+    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Consultor" Width="246px" />
+    <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Facturador" Width="214px" />
+    <asp:Button ID="Button3" runat="server" OnClick="Button3_Click" Text="Administrador" Width="223px" />
+    <br />
+
+
+    <br />
     <span style="color: #FFFFFF; font-size: xx-large">
     <asp:Label ID="Label1" runat="server" style="font-size: xx-large; color: #000000" Text="Ingrese su usuario y contraseña:" Font-Names="Arial" Font-Size="XX-Large"></asp:Label>
     <br />
@@ -45,10 +53,11 @@ ForeColor="Red">
     <br />
 <br />
 <asp:Button ID="ButtonAceptar" runat="server" Text="Aceptar" OnClick="ButtonAceptar_Click" />
-<br />
+    <br />
 <br />
 <asp:Label ID="LabelError" runat="server" ForeColor="Red" Text="Usuario incorrecto" Visible="False"></asp:Label>
 <br />
+    <asp:Button ID="ButtonRegistrarse" runat="server" OnClick="ButtonRegistrarse_Click" Text="Registrarse" />
 <br />
 <br />
 <br />

@@ -22,5 +22,26 @@
         </p>
         <p>
             &nbsp;</p>
+<p>
+            &nbsp;</p>
+        <p>
+            <asp:Button ID="ButtonPagarMensualidad" runat="server" OnClick="ButtonPagarMensualidad_Click" Text="Pagar mensualidad" />
+        </p>
+<p>
+            &nbsp;</p>
+<p>
+            &nbsp;</p>
+<p>
+            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Facturar" />
+        </p>
+        <p>
+            &nbsp;</p>
+        <p>
+            &nbsp;</p>
+        <p>
+            <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Ver infor sucursal" />
+        </p>
+        <p>
+            &nbsp;</p>
 
 </asp:Content>
