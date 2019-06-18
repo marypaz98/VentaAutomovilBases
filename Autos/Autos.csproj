@@ -108,6 +108,7 @@
     <Content Include="About.aspx" />
     <Content Include="AgregarExtras.aspx" />
     <Content Include="ComprarCarro.aspx" />
+    <Content Include="ConsignarAutomovil.aspx" />
     <Content Include="ConsultarModelo.aspx" />
     <Content Include="ConsultarModelo1.aspx" />
     <Content Include="Contact.aspx" />
@@ -198,6 +199,13 @@
     </Compile>
     <Compile Include="ComprarCarro.aspx.designer.cs">
       <DependentUpon>ComprarCarro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConsignarAutomovil.aspx.cs">
+      <DependentUpon>ConsignarAutomovil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConsignarAutomovil.aspx.designer.cs">
+      <DependentUpon>ConsignarAutomovil.aspx</DependentUpon>
     </Compile>
     <Compile Include="ConsultarModelo.aspx.cs">
       <DependentUpon>ConsultarModelo.aspx</DependentUpon>
