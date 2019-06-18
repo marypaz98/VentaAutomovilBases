@@ -119,7 +119,9 @@
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="escogerSucursal.aspx" />
+    <Content Include="facturador.aspx" />
     <Content Include="Facturar.aspx" />
+    <Content Include="facturarCarro.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -168,6 +170,7 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
+    <Content Include="venderCarro.aspx" />
     <Content Include="VerAutosDisponibles.aspx" />
     <Content Include="VerExtras.aspx" />
     <Content Include="VerInforSucursal.aspx" />
@@ -242,12 +245,26 @@
     <Compile Include="escogerSucursal.aspx.designer.cs">
       <DependentUpon>escogerSucursal.aspx</DependentUpon>
     </Compile>
+    <Compile Include="facturador.aspx.cs">
+      <DependentUpon>facturador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="facturador.aspx.designer.cs">
+      <DependentUpon>facturador.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Facturar.aspx.cs">
       <DependentUpon>Facturar.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Facturar.aspx.designer.cs">
       <DependentUpon>Facturar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="facturarCarro.aspx.cs">
+      <DependentUpon>facturarCarro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="facturarCarro.aspx.designer.cs">
+      <DependentUpon>facturarCarro.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -285,6 +302,13 @@
     </Compile>
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="venderCarro.aspx.cs">
+      <DependentUpon>venderCarro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="venderCarro.aspx.designer.cs">
+      <DependentUpon>venderCarro.aspx</DependentUpon>
     </Compile>
     <Compile Include="VerAutosDisponibles.aspx.cs">
       <DependentUpon>VerAutosDisponibles.aspx</DependentUpon>
