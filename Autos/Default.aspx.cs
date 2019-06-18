@@ -79,5 +79,10 @@ namespace Autos
         {
             Response.Redirect("administrador.aspx");
         }
+
+        protected void ButtonRegistrarse_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("registrarse.aspx");
+        }
     }
 }

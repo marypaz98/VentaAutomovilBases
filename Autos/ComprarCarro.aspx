@@ -35,10 +35,7 @@
         <br />
         <p>
             <asp:TextBox ID="TextBox1" runat="server" Visible="False" Width="197px"></asp:TextBox>
-            <asp:RequiredFieldValidator id="RequiredFieldValidator1" runat="server" ControlToValidate="TextBox1" 
-ErrorMessage="Este campo es requerido"
-ForeColor="Red">
-</asp:RequiredFieldValidator>
+           
         </p>
         <asp:Button ID="ButtonComprar" runat="server" Text="Comprar" OnClick="ButtonComprar_Click" />
         <br />

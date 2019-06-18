@@ -20,7 +20,7 @@ namespace Autos
         {
             String nombre, apellido1, apellido2, usuario, contrasenna, ubicacion, msj;
             int edad, cedula;
-            nombre = TextBoxUbicacion.Text;
+            nombre = TextBoxNombre.Text;
             apellido1 = TextBoxApellido1.Text;
             apellido2 = TextBoxApellido2.Text;
             usuario = TextBoxUsuario.Text;
@@ -45,13 +45,15 @@ namespace Autos
                 conexion.Open();
                 msj = (String)comando.ExecuteScalar();
                 conexion.Close();
-                Label1.Text = msj;
+                Label1.Text = "Usuario registrado con exito";
+                Label1.Visible = true;
                 //Response.Redirect("escogerSucursal.aspx?Valor=" + idCliente);
 
             }
             catch (Exception )
             {
                 Label1.Text = "Ha ocurrido un problema con la conexión a la base de datos";
+                Label1.Visible = true;
                // LabelError.Visible = true;
 
             }

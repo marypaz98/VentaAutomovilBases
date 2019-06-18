@@ -4,10 +4,22 @@
         <div>
             <br />
             <br />
-            Seleccione las extras que desea obtener, en caso de no querer extras seleccione el botón sin extras:<br />
-            <asp:CheckBoxList ID="CheckBoxList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="nombre" DataValueField="nombre" OnSelectedIndexChanged="CheckBoxList1_SelectedIndexChanged">
-            </asp:CheckBoxList>
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Autos.Properties.Settings.Conexion %>" SelectCommand="SELECT [nombre], [precio] FROM [Extra]"></asp:SqlDataSource>
+            Ingrese las extras que desea obtener, en caso de no querer extras seleccione el botón sin extras:<br />
+            <br />
+            <asp:Label ID="Label2" runat="server" Text="Extra1: "></asp:Label>
+            <asp:TextBox ID="TextBox1" runat="server" Width="221px"></asp:TextBox>
+            <br />
+            <br />
+            <asp:Label ID="Label3" runat="server" Text="Extra 2: "></asp:Label>
+            <asp:TextBox ID="TextBox2" runat="server" Width="212px"></asp:TextBox>
+            <br />
+            <br />
+            Extra 3:
+            <asp:TextBox ID="TextBox3" runat="server" Width="214px"></asp:TextBox>
+            <br />
+            <br />
+            Extra 4:
+            <asp:TextBox ID="TextBox4" runat="server" Width="216px"></asp:TextBox>
             <br />
             <br />
             <br />

@@ -20,7 +20,7 @@ namespace Autos
             String idSucursal = Request.QueryString["Valor1"];
             String marca = TextBox1.Text;
             String anno = TextBox2.Text;
-            Response.Redirect("ConsultarModelo1.aspx?Valor=" + idCliente + "Valor1=" + idSucursal+"Valor2="+marca+"Valor3="+anno);
+            Response.Redirect("ConsultarModelo1.aspx?Valor=" + idCliente + "&Valor1=" + idSucursal+"&Valor2="+marca+"&Valor3="+anno);
         }
     }
 }

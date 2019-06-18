@@ -11,7 +11,6 @@ namespace Autos
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
         }
 
         protected void ButtonComprar_Click(object sender, EventArgs e)
@@ -19,7 +18,17 @@ namespace Autos
             String idCliente = Request.QueryString["Valor"];
             String idSucursal = Request.QueryString["Valor1"];
             String idAutomovil = Request.QueryString["Valor2"];
-            Response.Redirect("AgregarExtras.aspx?Valor=" + idCliente + "Valor1=" + idSucursal + "Valor2=" + idAutomovil);
+            Response.Redirect("AgregarExtras.aspx?Valor=" + idCliente + "&Valor1=" + idSucursal + "&Valor2=" + idAutomovil);
+        }
+
+        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void GridView2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
