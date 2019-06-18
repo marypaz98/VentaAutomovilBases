@@ -40,12 +40,25 @@ namespace Autos
                 {
                     int plazo = System.Convert.ToInt32(TextBox1.Text);
                     comando.Parameters.AddWithValue("@financiamiento", 1);
-                    comando.Parameters.AddWithValue("plazo", plazo);
+                    comando.Parameters.AddWithValue("@plazo", plazo);
                 }
                 else
                 {
                     comando.Parameters.AddWithValue("@financiamiento", 0);
                 }
+                try
+                {
+                    conexion.Open();
+                    comando.ExecuteNonQuery();
+                    conexion.Close();
+                    Label2.Text = "Compra realizada con éxito";
+                    Label2.Visible = true;
+                }
+                catch (Exception)
+                {
+                    Label2.Visible = true;
+                }
+
             }
             catch (Exception)
             {

@@ -18,12 +18,15 @@ namespace Autos
 
         protected void Button2_Click(object sender, EventArgs e)
         {
-
+            String idCliente = Request.QueryString["Valor"];
+            String idSucursal = Request.QueryString["Valor1"];
+            int idAutomovil = System.Convert.ToInt32(Request.QueryString["Valor2"]);
+            Response.Redirect("ComprarCarro.aspx?Valor=" + idCliente + "&Valor1=" + idSucursal + "&Valor2=" + idAutomovil);
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            if (CheckBoxList1.Items.Count != 0)
+            if (!string.IsNullOrEmpty(TextBox1.Text)|| !string.IsNullOrEmpty(TextBox2.Text) || !string.IsNullOrEmpty(TextBox3.Text) || !string.IsNullOrEmpty(TextBox4.Text))
             {
                 // If so, loop through all checked items and print results.  
                 String idCliente = Request.QueryString["Valor"];
@@ -32,41 +35,106 @@ namespace Autos
                 string s = "";
                 SqlConnection conexion = new SqlConnection(@"Data Source=DESKTOP-FA0O96B;Initial Catalog=Fabrica;Integrated Security=True");
                 SqlCommand comando = conexion.CreateCommand();
-                for (int x = 0; x < CheckBoxList1.Items.Count; x++)
+                if ((TextBox1.Text) != "")
                 {
                     comando.CommandText = "spAgregarExtraxAutomovil";
                     comando.CommandType = CommandType.StoredProcedure;
                     comando.Parameters.AddWithValue("@idAutomovil", idAutomovil);
-                    comando.Parameters.AddWithValue("@idExtra", x + 1);
-
-                    //  s = s + "Checked Item " + (x + 1).ToString() + " = " + checkedListBox1.CheckedItems[x].ToString() + "\n";
-                }
-                //  MessageBox.Show(s);
-                try
-                {
-                    conexion.Open();
-                    s = (String)comando.ExecuteScalar();
-                    conexion.Close();
-                    if( s == "1"){
-                        Response.Redirect("ComprarCarro.aspx?Valor=" + idCliente + "Valor1=" + idSucursal + "Valor2=" + idAutomovil);
-                    }
-                    else
+                    comando.Parameters.AddWithValue("@idExra", System.Convert.ToInt32(TextBox1.Text));
+                    try
                     {
-                        Label1.Text = s;
-                        Label1.Visible = true;
+                        conexion.Open();
+                        s = (String)comando.ExecuteScalar();
+                        conexion.Close();
+                       // Response.Redirect("ComprarCarro.aspx?Valor=" + idCliente + "&Valor1=" + idSucursal + "&Valor2=" + idAutomovil);
+
+
                     }
-                    
-                    //Response.Redirect("escogerSucursal.aspx?Valor=" + idCliente);
+                    catch (Exception)
+                    {
+                        Label1.Text = "Ha ocurrido un error";
+                        Label1.Visible = true;
+                        //  LabelError.Visible = true;
 
+                    }
                 }
-                catch (Exception )
+                if (TextBox2.Text != "")
                 {
-                    Label1.Text = "Ha ocurrido un error";
-                    Label1.Visible = true;
-                    //  LabelError.Visible = true;
+                    comando.CommandText = "spAgregarExtraxAutomovil";
+                    comando.CommandType = CommandType.StoredProcedure;
+                    comando.Parameters.AddWithValue("@idAutomovil", idAutomovil);
+                    comando.Parameters.AddWithValue("@idExra", System.Convert.ToInt32(TextBox1.Text));
+                    try
+                    {
+                        conexion.Open();
+                        s = (String)comando.ExecuteScalar();
+                        conexion.Close();
+                        // Response.Redirect("ComprarCarro.aspx?Valor=" + idCliente + "&Valor1=" + idSucursal + "&Valor2=" + idAutomovil);
 
+
+                    }
+                    catch (Exception)
+                    {
+                        Label1.Text = "Ha ocurrido un error";
+                        Label1.Visible = true;
+                        //  LabelError.Visible = true;
+
+                    }
+                }
+                if (TextBox3.Text != "")
+                {
+                    comando.CommandText = "spAgregarExtraxAutomovil";
+                    comando.CommandType = CommandType.StoredProcedure;
+                    comando.Parameters.AddWithValue("@idAutomovil", idAutomovil);
+                    comando.Parameters.AddWithValue("@idExra", System.Convert.ToInt32(TextBox1.Text));
+                    try
+                    {
+                        conexion.Open();
+                        s = (String)comando.ExecuteScalar();
+                        conexion.Close();
+                        // Response.Redirect("ComprarCarro.aspx?Valor=" + idCliente + "&Valor1=" + idSucursal + "&Valor2=" + idAutomovil);
+
+
+                    }
+                    catch (Exception)
+                    {
+                        Label1.Text = "Ha ocurrido un error";
+                        Label1.Visible = true;
+                        //  LabelError.Visible = true;
+
+                    }
+                }
+                if (TextBox4.Text != "")
+                {
+                    comando.CommandText = "spAgregarExtraxAutomovil";
+                    comando.CommandType = CommandType.StoredProcedure;
+                    comando.Parameters.AddWithValue("@idAutomovil", idAutomovil);
+                    comando.Parameters.AddWithValue("@idExra", System.Convert.ToInt32(TextBox1.Text));
+                    try
+                    {
+                        conexion.Open();
+                        s = (String)comando.ExecuteScalar();
+                        conexion.Close();
+                        // Response.Redirect("ComprarCarro.aspx?Valor=" + idCliente + "&Valor1=" + idSucursal + "&Valor2=" + idAutomovil);
+
+
+                    }
+                    catch (Exception)
+                    {
+                        Label1.Text = "Ha ocurrido un error";
+                        Label1.Visible = true;
+                        //  LabelError.Visible = true;
+
+                    }
                 }
 
+
+
+                //  s = s + "Checked Item " + (x + 1).ToString() + " = " + checkedListBox1.CheckedItems[x].ToString() + "\n";
+
+                //  MessageBox.Show(s);
+
+                Response.Redirect("ComprarCarro.aspx?Valor=" + idCliente + "&Valor1=" + idSucursal + "&Valor2=" + idAutomovil);
             }
             else
             {

@@ -23,20 +23,26 @@ namespace Autos
             SqlCommand comando;
             if (idSucursal == "1") {
                  conexion = new SqlConnection(@"Data Source=DESKTOP-FA0O96B;Initial Catalog=Sucursal_1;Integrated Security=True");
-                comando = conexion.CreateCommand(); }
+                comando = conexion.CreateCommand();
+                Label1.Text = "Sucursal 1";
+                    Label1.Visible = true; }
             else if (idSucursal == "2")
             {
                 conexion = new SqlConnection(@"Data Source=DESKTOP-FA0O96B;Initial Catalog=Sucursal_2;Integrated Security=True");
                 comando = conexion.CreateCommand();
+                Label1.Text = "Sucursal 2";
+                Label1.Visible = true;
             }
             else
             {
                 conexion = new SqlConnection(@"Data Source=DESKTOP-FA0O96B;Initial Catalog=Sucursal_3;Integrated Security=True");
                 comando = conexion.CreateCommand();
+                Label1.Text = "Sucursal 3";
+                Label1.Visible = true;
             }
             comando.CommandText = "consultarModelo";
             comando.CommandType = System.Data.CommandType.StoredProcedure;
-            comando.Parameters.AddWithValue("@marca",marca);
+            comando.Parameters.AddWithValue("@marca", marca);
             comando.Parameters.AddWithValue("@anno", System.Convert.ToInt32(anno));
             comando.Parameters.AddWithValue("@idCliente", System.Convert.ToInt32(idCliente));
             try
@@ -47,6 +53,8 @@ namespace Autos
                 conexion.Close();
                 if (s == "1")
                 {
+                    Label1.Text = "1";
+                    Label1.Visible = true;
                     comando.CommandText = "consultarCarros";
                     comando.CommandType = System.Data.CommandType.StoredProcedure;
                     comando.Parameters.AddWithValue("@marca", marca);
@@ -85,8 +93,8 @@ namespace Autos
             }
             catch(Exception)
             {
-                Label1.Text = "Ha ocurrido un error con la conexion a la base datos";
-                Label1.Visible = true;
+            //    Label1.Text = "Ha ocurrido un error con la conexion a la base datos";
+              //  Label1.Visible = true;
             }
 
         }

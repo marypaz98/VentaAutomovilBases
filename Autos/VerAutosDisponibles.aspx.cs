@@ -18,34 +18,42 @@ namespace Autos
         }
 
 
-        protected void GridView1_SelectedIndexChanging(object sender, GridViewSelectEventArgs e)
+        protected void GridView1_SelectedIndexChanged(object sender, GridViewSelectEventArgs e)
+        {
+
+
+
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
         {
             String idCliente = Request.QueryString["Valor"];
             String idSucursal = Request.QueryString["Valor1"];
-            int idAutomovil = Convert.ToInt32(GridView1.DataKeys[e.NewSelectedIndex].Value);
-            int idAutomovilxSucursal = idAutomovil + 1;
+            String placa = TextBox1.Text;
             int idAutomovil1;
             SqlConnection conexion = new SqlConnection(@"Data Source=DESKTOP-FA0O96B;Initial Catalog=Fabrica;Integrated Security=True");
             SqlCommand comando = conexion.CreateCommand();
-            comando.CommandText = "selectIdAutomovil";
+            comando.CommandText = "SelectIdAutomovil1";
             comando.CommandType = CommandType.StoredProcedure;
-            comando.Parameters.AddWithValue("@idAutomovilxSucursal", idAutomovilxSucursal);
-            comando.Parameters.AddWithValue("@idSucursal", idSucursal);
+            comando.Parameters.AddWithValue("@placa", placa);
             try
             {
                 conexion.Open();
                 idAutomovil1 = (int)comando.ExecuteScalar();
+                Console.WriteLine("Hola");
+                Console.WriteLine(idAutomovil1);
                 conexion.Close();
-                Response.Redirect("VerExtras.aspx?Valor=" + idCliente + "Valor1=" + idSucursal + "Valor2=" + idAutomovil1); Response.Redirect("escogerSucursal.aspx?Valor=" + idCliente);
+                Response.Redirect("VerExtras.aspx?Valor=" + idCliente + "&Valor1=" + idSucursal + "&Valor2=" + idAutomovil1);
+
 
             }
-            catch (Exception )
+            catch (Exception)
             {
-              //  LabelError.Visible = true;
+
+                LabelError.Visible = true;
+
 
             }
-            
-
         }
     }
 }
